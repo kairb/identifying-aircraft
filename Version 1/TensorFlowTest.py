@@ -22,6 +22,10 @@ train_images = train_images / 255.0
 test_images = test_images / 255.0
 
 # construct model
+image_shape = (400, 400, 3)
+model_1 = keras.applications.inception_v3.InceptionV3(include_top=False, weights='imagenet', input_tensor=None,
+                                                      input_shape=image_shape, pooling= None)
+
 model = keras.Sequential([
     keras.layers.Flatten(input_shape=(28, 28)),
     keras.layers.Dense(128, activation=tf.nn.relu),
@@ -34,8 +38,10 @@ model.compile(optimizer=tf.train.AdamOptimizer(),
 
 
 # train model
-model.fit(train_images, train_labels, epochs=1)
+model.fit(train_images, train_labels, epochs=3)
 
+
+print("test")
 # test model
 test_loss, test_acc = model.evaluate(test_images, test_labels)
 
