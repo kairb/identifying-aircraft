@@ -1,6 +1,2 @@
-print("Hello world")
-print("further test")
+from sklearn import datasets
 
-
-for x in range(0,10,2):
-	print(x)
