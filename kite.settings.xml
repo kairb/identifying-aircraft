@@ -1,0 +1,7 @@
+<application>
+  <component name="kite">
+    <option name="showWelcomeNotification" value="false" />
+    <option name="editorMetricsEnabled" value="false" />
+    <option name="autocorrectRunValidationEnabled" value="false" />
+  </component>
+</application>
