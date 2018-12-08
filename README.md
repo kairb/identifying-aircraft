@@ -1,9 +1,8 @@
 # Project Title
-We all know what an aircraft looks like from above, but do computers? this project aims to teach a computer how to 
-A *brief* paragraph explaining your project and what it does should be written here. The idea is to give readers an overview of what it is that you've built.
+We all know what an aircraft looks like from above, but do computers? this project aims to teach a computer what an aircraft looks like and further identify an aircraft in an image
 
 ## Getting Started (Software Based)
-You should write a bit about **how** I can get your project working, It's good to think in terms of the following sections:
+To run my program, pull the entire project from gitlab and follow the install instructions. 
 
 ### Prerequisites
 To enable this project to run correctly, you must have the following:
@@ -29,6 +28,7 @@ database_pass=password
 
 ```
 requirements.bat
+classifier.py
 ```
 
 ### Running Tests
@@ -40,8 +40,6 @@ What versioning statergy are you using for your project, something like [semanti
 
 ## Authors
 * Kai Roper-Blackman
-* Fred Bloggs - UI Design
-
 ## References
 * [Gitlab Markdown Guide](https://docs.gitlab.com/ee/user/markdown.html)
 * [Example 1](https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/v2.0.2)
