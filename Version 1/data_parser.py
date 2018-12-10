@@ -12,7 +12,11 @@ class Data:
         temp_labels = []
         for i in range(1, amount + 1):
             temp_images.append(Parser.load_flat_image(i))
-            temp_labels.append([1, ])
+            temp_labels.append(["aircraft", ])
+
+        for j in range(101, 101 + amount + 1):
+            temp_images.append(Parser.load_flat_image(i))
+            temp_labels.append(["no aircraft54", ])
 
         self.images = np.asarray(temp_images)
         self.labels = np.ravel(temp_labels)
