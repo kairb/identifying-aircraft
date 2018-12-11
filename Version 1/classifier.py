@@ -1,35 +1,28 @@
-#import statements
-from sklearn import datasets
+# import statements
 from sklearn import svm
-
 import matplotlib.pyplot as plt
 from image_parser import Parser
 import numpy as np
+from data_parser import Data
 
-clf = svm.SVC()
+TRAINING_SET_SIZE = 90
+TEST_IMAGE = 93
 
-image = Parser.load_image(1)
+clf = svm.SVC(gamma=0.001, C=100)
+data = Data()
 
-#print(image[1])
-
-digits = datasets.load_digits()
-
-x,y = digits.data[:-1], digits.target[:-1]
-print(x[1])
-
-array = np.concatenate(Parser.load_image(1),Parser.load_image(2))
-# for i in range(1,100):
-
-
-# clf.fit(Parser.load_image(i),1)
+##get training data
+data.new_training_set(TRAINING_SET_SIZE)
+training_set = data.get_training_set()
+training_labels = data.get_training_labels()
+test_image = data.get_test_image(TEST_IMAGE)
 
 
+##fit training data
+clf.fit(training_set, training_labels)
 
-# print("Prediction: ",clf.predict(Parser.load_image(100)))
+print("Prediction: ", clf.predict(test_image))
 
+plt.imshow(Parser.load_image(TEST_IMAGE))
 
-#plt.imshow(Parser.load_image(100), cmap = plt.cm.gray_r, interpolation = "nearest")
-
-#plt.show()
-
-
+plt.show()
