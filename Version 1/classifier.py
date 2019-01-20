@@ -12,9 +12,7 @@ clf = svm.SVC(gamma=0.001, C=100)
 data = Data()
 
 ##get training data
-data.new_training_set(TRAINING_SET_SIZE)
-training_set = data.get_training_set()
-training_labels = data.get_training_labels()
+training_set, training_labels = data.new_training_set(TRAINING_SET_SIZE)
 test_image = data.get_test_image(TEST_IMAGE)
 
 

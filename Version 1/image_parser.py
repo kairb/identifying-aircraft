@@ -16,6 +16,11 @@ class Parser:
         return image
 
     @staticmethod
+    def load_other_image(image_number):
+        image = cv.imread("../Images400x400/" + str(image_number) + ".png", 0)
+        return image
+
+    @staticmethod
     def load_images(images_list):
         ##new numpy array here
         for image_number in images_list:
