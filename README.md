@@ -14,7 +14,9 @@ To enable this project to run correctly, you must have the following:
 
 #### Install libraries and run program
 ```
-requirements.bat
+run requirements.bat
+
+then
 classifier.py
 or 
 c_gamma_test.py to obtain gamma and c values
