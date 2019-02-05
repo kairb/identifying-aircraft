@@ -38,7 +38,7 @@ print(train_images[0])
 # # train model
 # model.fit(train_images, train_labels, epochs=5)
 #
-# # test model
+# # Test model
 # test_loss, test_acc = model.evaluate(test_images, test_labels)
 #
 # print('Test accuracy:', test_acc)

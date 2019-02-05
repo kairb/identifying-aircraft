@@ -23,4 +23,4 @@ for gamma in range(1, 10):
         print("gamma: ", gamma * 0.1, "C: ", c, clf.predict(test_image_1))
         print("gamma: ", gamma * 0.1, "C: ", c, clf.predict(test_image_2))
 
-print("end of test")
+print("end of Test")
