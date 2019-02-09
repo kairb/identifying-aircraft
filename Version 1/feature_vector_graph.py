@@ -20,7 +20,7 @@ class Graphs:
         plt.title("Ground")
 
         plt.subplot2grid((2,2),(1,0), colspan=2)
-        plt.plot(x_axis, ground, 'b,', x_axis, aircraft, 'r,')
+        plt.plot(x_axis, ground, 'b,', x_axis, aircraft, 'r.')
         plt.title("Combined")
 
         plt.show()
