@@ -6,14 +6,13 @@ from data_parser import Data
 
 # declaring data set paramaters
 TRAINING_SET_SIZE = 90
-TEST_IMAGES = [95, 195, 96, 97, 198, 199, 98, 99, 88, 191]
+TEST_IMAGES = [95, 195, 96, 97, 198, 88, 98, 99, 88, 191]
 
 # get training data in the form of feature descriptors
-training_set, training_labels = Data.create_hog_data_set(TRAINING_SET_SIZE)
-test_images = Data.create_hog_image(TEST_IMAGES)
-# GUI
-MAX_COLUMNS = 5
-MAX_ROWS = 2
+# training_set, training_labels = Data.create_hog_data_set(TRAINING_SET_SIZE)
+# test_images = Data.create_hog_image(TEST_IMAGES)
+training_set, training_labels = Data.create_realistic_hog_data_set(TRAINING_SET_SIZE)
+test_images = Data.create_realistic_hog_test_set(TEST_IMAGES)
 
 clf = svm.SVC(gamma=0.0001, C=10)
 
@@ -22,6 +21,10 @@ clf.fit(training_set, training_labels)
 
 result = clf.predict(test_images)
 print("Prediction: ", result)
+
+# GUI
+MAX_COLUMNS = 5
+MAX_ROWS = 2
 
 for i in range(1, len(test_images) + 1):
     plt.subplot(MAX_ROWS, MAX_COLUMNS, i)
