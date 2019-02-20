@@ -12,15 +12,15 @@ class Graphs:
         x_axis = range(len(aircraft))
 
         plt.subplot2grid((2,2),(0,0))
-        plt.plot(x_axis, aircraft, 'r,')
+        plt.plot(x_axis, aircraft, 'b,')
         plt.title("Aircraft")
 
         plt.subplot2grid((2,2),(0,1))
-        plt.plot(x_axis, ground, 'b,')
+        plt.plot(x_axis, ground, 'r,')
         plt.title("Ground")
 
         plt.subplot2grid((2,2),(1,0), colspan=2)
-        plt.plot(x_axis, ground, 'b,', x_axis, aircraft, 'r.')
+        plt.plot(x_axis, ground, 'r,', x_axis, aircraft, 'b,')
         plt.title("Combined")
 
         plt.show()

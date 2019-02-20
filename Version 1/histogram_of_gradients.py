@@ -6,13 +6,17 @@ from image_parser import Parser
 
 class HOG:
     @staticmethod
+    # returns feature descriptor of image supplied flattened
     def create_hog_image(image):
         fd, hog_image = hog(image, orientations=8, pixels_per_cell=(16, 16),
-                            cells_per_block=(1, 1), visualize=True, multichannel=None, feature_vector=True)
+                            cells_per_block=(1, 1), visualize=True, multichannel=None, feature_vector=True,
+                            block_norm='L2-Hys')
         return fd.ravel()
 
     @staticmethod
+    # displays hog feature descriptor over origianl image
     def display_hog_image(image):
+        # generate feature descriptor and hog image
         fd, hog_image = hog(image, orientations=8, pixels_per_cell=(16, 16),
                             cells_per_block=(1, 1), visualize=True, multichannel=None)
 
