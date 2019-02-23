@@ -72,15 +72,18 @@ elif CLASSIFICATION_METHOD == 2:
     print("search in progress....")
 
     training_set, training_labels = Data.create_resized_hog_data_set(IMAGE_SIZE)
-    test_images = Data.create_airport_hog_data_set(2, X_STEP, Y_STEP, IMAGE_SIZE)
+    test_images = Data.create_airport_hog_data_set(4, X_STEP, Y_STEP, IMAGE_SIZE)
 
-    clf = svm.SVC(gamma=0.0001, C=10)
+    clf = svm.SVC(gamma=0.0001, C=10, probability=True)
 
     # fit training data
     clf.fit(training_set, training_labels)
 
     result = clf.predict(test_images)
 
-    for i in result:
-        print(i)
-    print("Prediction: ", result)
+    probablity = clf.predict_proba(test_images)
+
+    for i in range(len(result)):
+        print(result[i] , "Probability  ", probablity[i])
+
+
