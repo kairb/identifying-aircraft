@@ -4,7 +4,8 @@ from sklearn.metrics import classification_report
 from sklearn.svm import SVC
 from data_parser import Data
 
-training_set, training_labels = Data.new_full_size_training_set(90)
+
+training_set, training_labels = Data.create_realistic_hog_data_set(100)
 samples = len(training_set)
 training_set = training_set.reshape((samples, -1))
 

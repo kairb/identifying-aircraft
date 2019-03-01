@@ -5,6 +5,11 @@ import random
 
 
 class Parser:
+
+    @staticmethod
+    def load_image_from_path(path):
+        return cv.imread(path)
+
     @staticmethod
     def load_flat_image(image_number):
         image = cv.imread("../images/" + str(image_number) + ".png", 0)
@@ -31,5 +36,7 @@ class Parser:
         return cv.imread("../Airports/" + str(image_number) + ".png", 0)
 
     @staticmethod
-    def resize_image(image, dimension):
-        return cv.resize(image, (dimension, dimension))
+    def resize_image(image, x,y):
+        return cv.resize(image, (x,y))
+
+
