@@ -10,6 +10,8 @@ To enable this project to run correctly, you must have the following:
 * TensorFlow
 * Keras
 * Scikit-learn
+* Scikit-Image
+* opencv-pyhton
 
 
 #### Install libraries and run program
