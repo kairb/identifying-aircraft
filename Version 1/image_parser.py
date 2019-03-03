@@ -29,14 +29,29 @@ class Parser:
 
     @staticmethod
     def rotate_image(image):
+        """
+        rotates image by random degrees in 90 degree multiples
+        :param image: image to be rotated
+        :return: rotated image
+        """
         return np.rot90(image, random.randint(1, 4))
 
     @staticmethod
     def load_airport(image_number):
+        """
+        Loads image of airport
+        :param image_number: airport number to load
+        :return: returns image of airport
+        """
         return cv.imread("../Airports/" + str(image_number) + ".png", 0)
 
     @staticmethod
-    def resize_image(image, x,y):
-        return cv.resize(image, (x,y))
-
-
+    def resize_image(image, x, y):
+        """
+        Resizes given image
+        :param image: image to be resized
+        :param x: new x dimension
+        :param y: new y dimension
+        :return: returns resized image
+        """
+        return cv.resize(image, (x, y))
