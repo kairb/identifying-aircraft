@@ -1,6 +1,7 @@
 from image_parser import Parser
 import numpy as np
 from histogram_of_gradients import HOG
+import os
 
 
 class Data:
@@ -89,9 +90,9 @@ class Data:
         return afds, gfds
 
     @staticmethod
-    def create_resized_hog_data_set(x,y):
+    def create_resized_hog_data_set(x, y):
         """
-        Returns resized data for training
+        Returns resized data for training using old data set
         :param dimension:
         :return: images, labels for trainig
         """
@@ -100,12 +101,12 @@ class Data:
 
         for i in range(1, 100 + 1):
             temp_images.append(
-                HOG.create_hog_image(Parser.rotate_image(Parser.resize_image(Parser.load_image(i), x,y))))
+                HOG.create_hog_image(Parser.rotate_image(Parser.resize_image(Parser.load_image(i), x, y))))
             temp_labels.append(1)
 
         for j in range(100, 200 + 1):
             temp_images.append(
-                HOG.create_hog_image(Parser.rotate_image(Parser.resize_image(Parser.load_image(j), x,y))))
+                HOG.create_hog_image(Parser.rotate_image(Parser.resize_image(Parser.load_image(j), x, y))))
             temp_labels.append(0)
 
         images = np.asarray(temp_images)
@@ -113,18 +114,45 @@ class Data:
         return images, labels
 
     @staticmethod
-    def create_airport_hog_data_set(path, x_step, y_step, size_x,size_y):
+    def create_training_data(x, y):
+        """
+        Returns resized data for training using newly gen images
+        :param x:
+        :param y:
+        :return: images, labels for training
+        """
+        temp_images = []
+        temp_labels = []
+        aircraft_path = "../Aircraft/"
+        ground_path = "../Ground/"
+        for image in os.listdir(aircraft_path):
+            temp_images.append(
+                HOG.create_hog_image(
+                    Parser.rotate_image(Parser.resize_image(Parser.load_image_from_path(aircraft_path + image), x, y))))
+            temp_labels.append(1)
+
+        for image in os.listdir(ground_path):
+            temp_images.append(
+                HOG.create_hog_image(
+                    Parser.rotate_image(Parser.resize_image(Parser.load_image_from_path(ground_path + image), x, y))))
+            temp_labels.append(0)
+
+        images = np.asarray(temp_images)
+        labels = np.ravel(temp_labels)
+        return images, labels
+
+    @staticmethod
+    def create_airport_hog_data_set(path, x_step, y_step, size_x, size_y):
         image = np.asarray(Parser.load_image_from_path(path))
         print(image.shape)
         images = []
         hog_subsections = []
-        for x in range(0, len(image[0]) - size_x+1, x_step):
-            for y in range(0, len(image) - size_y+1, y_step):
+        for x in range(0, len(image[0]) - size_x + 1, x_step):
+            for y in range(0, len(image) - size_y + 1, y_step):
                 sub_image = image[y:y + size_y, x: x + size_x]
                 images.append(sub_image)
                 hog_subsections.append(HOG.create_hog_image(sub_image))
 
         return hog_subsections, images
 
-
-#Data.create_airport_hog_data_set(Parser.load_airport(2), 10, 10, 50)
+# Data.create_airport_hog_data_set(Parser.load_airport(2), 10, 10, 50)

@@ -5,6 +5,7 @@ from matplotlib import pyplot as plt
 from tkinter.filedialog import askopenfilename
 from image_parser import Parser
 from PIL import Image, ImageTk
+from pdf import PDF
 
 
 class GUI:
@@ -20,11 +21,10 @@ class GUI:
         self.x_step.set("30")
         self.y_step.set("30")
         self.root.title("Aircraft Identification")
-        # self.root.state('zoomed')
+        #self.root.state('zoomed')
         self.image_path = "../Airports/3.png"
         self.label_image_path = StringVar()
         self.label_image_path.set(self.image_path[-7:])
-        self.canvas = Canvas(self.right_frame, bg="green", height=100, width=100, )
         # self.text = Text(self.right_frame, height=30, width=30).pack(anchor=E)
 
     def home(self):
@@ -36,9 +36,11 @@ class GUI:
         Button(self.left_frame, text="Select image", command=self.file_selector).grid(row=1, column=0, sticky="W")
         Label(self.left_frame, textvariable=self.label_image_path).grid(row=1, column=0, sticky="E")
 
-        Radiobutton(self.left_frame, text="Normal", variable=self.classification_method, value=1).grid(row=2, column=0, sticky = "W")
+        Radiobutton(self.left_frame, text="Normal", variable=self.classification_method, value=1).grid(row=2, column=0,
+                                                                                                       sticky="W")
         Radiobutton(self.left_frame, text="Image search", variable=self.classification_method, value=2).grid(row=3,
-                                                                                                             column=0, sticky ="W")
+                                                                                                             column=0,
+                                                                                                             sticky="W")
 
         Label(self.left_frame, text="x").grid(row=4, column=0, sticky="W")
         Entry(self.left_frame, textvariable=self.x).grid(row=4, column=0)
@@ -53,10 +55,6 @@ class GUI:
         Entry(self.left_frame, textvariable=self.y_step).grid(row=7, column=0)
 
         Button(self.left_frame, text="Start", command=self.start_classification).grid(row=8)
-
-        # right frame
-
-        # self.canvas.grid(row = 0, column = 0)
 
     def start_classification(self):
         if self.classification_method.get() == 1:
@@ -102,7 +100,10 @@ class GUI:
         searches images for aircraft
         :return:
         """
-        training_set, training_labels = Data.create_resized_hog_data_set(int(self.x.get()), int(self.y.get()))
+        # training_set, training_labels = Data.create_resized_hog_data_set(int(self.x.get()), int(self.y.get()))
+
+        training_set, training_labels = Data.create_training_data(int(self.x.get()), int(self.y.get()))
+
         test_images, images = Data.create_airport_hog_data_set(self.image_path, int(self.x_step.get()),
                                                                int(self.y_step.get()),
                                                                int(self.x.get()), int(self.y.get()))
@@ -119,6 +120,8 @@ class GUI:
         for i in range(len(result)):
             print(result[i], "Probability  ", probability[i])
 
+        PDF.write_to_folder(images, result, probability)
+
         MAX_COLUMNS = 5
         MAX_ROWS = 10
 
@@ -130,10 +133,12 @@ class GUI:
             plt.axis('off')
 
         plt.show()
+        print("past plt")
+
 
     def file_selector(self):
         """
-        sets image_path to users choice
+        sets image_path to users choice using file dialog
         """
         Tk().withdraw()  # we don't want a full GUI, so keep the root window from appearing
         self.image_path = askopenfilename()  # show an "Open" dialog box and return the path to the selected file
@@ -141,6 +146,9 @@ class GUI:
 
     def run(self):
         self.root.mainloop()
+
+    def generate_pdf(self):
+        pass
 
 
 if __name__ == "__main__":
