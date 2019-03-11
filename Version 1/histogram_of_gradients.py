@@ -33,3 +33,6 @@ class HOG:
         ax2.imshow(hog_image_rescaled, cmap=plt.cm.gray)
         ax2.set_title('Histogram of Oriented Gradients')
         plt.show()
+
+
+HOG.display_hog_image(Parser.load_image(110))
