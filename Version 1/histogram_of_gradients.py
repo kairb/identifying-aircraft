@@ -35,4 +35,4 @@ class HOG:
         plt.show()
 
 
-HOG.display_hog_image(Parser.load_image(110))
+#HOG.display_hog_image(Parser.load_image(110))

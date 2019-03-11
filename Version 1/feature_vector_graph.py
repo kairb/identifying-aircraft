@@ -14,14 +14,20 @@ class Graphs:
         plt.subplot2grid((2,2),(0,0))
         plt.plot(x_axis, aircraft, 'b,')
         plt.title("Aircraft")
+        plt.xlabel("Features")
+        plt.ylabel("Orientation")
 
         plt.subplot2grid((2,2),(0,1))
         plt.plot(x_axis, ground, 'r,')
         plt.title("Ground")
+        plt.xlabel("Features")
+        plt.ylabel("Orientation")
 
         plt.subplot2grid((2,2),(1,0), colspan=2)
         plt.plot(x_axis, ground, 'r,', x_axis, aircraft, 'b,')
         plt.title("Combined")
+        plt.xlabel("Features")
+        plt.ylabel("Orientation")
 
         plt.show()
 
