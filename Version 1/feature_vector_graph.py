@@ -32,6 +32,18 @@ class Graphs:
         plt.show()
 
     @staticmethod
+    def create_combined_graph():
+        aircraft, ground = Graphs.average_data()
+        x_axis = range(len(aircraft))
+
+        plt.plot(x_axis, ground, 'r.', x_axis, aircraft, 'b.')
+        plt.title("Aircraft = Blue, ground = Red")
+        plt.xlabel("Features")
+        plt.ylabel("Orientation")
+
+        plt.show()
+
+    @staticmethod
     def average_data():
         aircraft, ground = Data.create_fd_arrays()
 
@@ -55,4 +67,5 @@ class Graphs:
 
         return aircraft_average, ground_average
 
-Graphs.create_fd_scatter_graph()
+#Graphs.create_fd_scatter_graph()
+Graphs.create_combined_graph()
