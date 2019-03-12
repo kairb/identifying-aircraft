@@ -37,9 +37,9 @@ class Graphs:
         x_axis = range(len(aircraft))
 
         plt.plot(x_axis, ground, 'r.', x_axis, aircraft, 'b.')
-        plt.title("Aircraft = Blue, ground = Red")
+        plt.title("Aircraft = Blue, Ground = Red")
         plt.xlabel("Features")
-        plt.ylabel("Orientation")
+        plt.ylabel("Gradient")
 
         plt.show()
 
