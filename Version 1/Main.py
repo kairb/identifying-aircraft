@@ -6,6 +6,7 @@ from tkinter.filedialog import askopenfilename
 from image_parser import Parser
 from PIL import Image, ImageTk
 from pdf import PDF
+from drawing import Draw
 
 
 class GUI:
@@ -21,7 +22,7 @@ class GUI:
         self.x_step.set("30")
         self.y_step.set("30")
         self.root.title("Aircraft Identification")
-        #self.root.state('zoomed')
+        # self.root.state('zoomed')
         self.image_path = "../Airports/3.png"
         self.label_image_path = StringVar()
         self.label_image_path.set(self.image_path[-7:])
@@ -120,21 +121,24 @@ class GUI:
         for i in range(len(result)):
             print(result[i], "Probability  ", probability[i])
 
+        image = Draw.draw_predictions(result, self.image_path, self.x, self.y, self.x_step, self.y_step)
         PDF.write_to_folder(images, result, probability)
 
         MAX_COLUMNS = 5
         MAX_ROWS = 10
 
-        for i in range(1, 50 + 1):
-            plt.subplot(MAX_ROWS, MAX_COLUMNS, i)
-            plt.imshow(images[i - 1], cmap="gray")
-            label = str(result[i - 1]) + str(probability[i - 1])
-            plt.title(label)
-            plt.axis('off')
-
+        plt.imshow(image)
         plt.show()
-        print("past plt")
 
+        # for i in range(1, 50 + 1):
+        #     plt.subplot(MAX_ROWS, MAX_COLUMNS, i)
+        #     plt.imshow(images[i - 1], cmap="gray")
+        #     label = str(result[i - 1]) + str(probability[i - 1])
+        #     plt.title(label)
+        #     plt.axis('off')
+        #
+        # plt.show()
+        # print("past plt")
 
     def file_selector(self):
         """
