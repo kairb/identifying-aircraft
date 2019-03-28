@@ -21,11 +21,9 @@ class GUI:
         self.x_step.set("30")
         self.y_step.set("30")
         self.root.title("Aircraft Identification")
-        #self.root.state('zoomed')
         self.image_path = "../Airports/3.png"
         self.label_image_path = StringVar()
         self.label_image_path.set(self.image_path[-7:])
-        # self.text = Text(self.right_frame, height=30, width=30).pack(anchor=E)
 
     def home(self):
         """
@@ -62,15 +60,16 @@ class GUI:
         elif self.classification_method.get() == 2:
             self.image_search()
 
-    def normal_classification(self):
-        TRAINING_SET_SIZE = 90
-        TEST_IMAGES = [95, 195, 96, 97, 198, 88, 98, 99, 94, 191]
+    @staticmethod
+    def normal_classification():
+        """
+        starts classification of simple images
+        """
+        training_set_size = 90
+        test_images = [95, 195, 96, 97, 198, 88, 98, 99, 94, 191]
 
-        # get training data in the form of feature descriptors
-        # training_set, training_labels = Data.create_hog_data_set(TRAINING_SET_SIZE)
-        # test_images = Data.create_hog_image(TEST_IMAGES)
-        training_set, training_labels = Data.create_realistic_hog_data_set(TRAINING_SET_SIZE)
-        test_images = Data.create_realistic_hog_test_set(TEST_IMAGES)
+        training_set, training_labels = Data.create_realistic_hog_data_set(training_set_size)
+        test_images = Data.create_realistic_hog_test_set(test_images)
 
         clf = svm.SVC(gamma=0.0001, C=10)
 
@@ -81,12 +80,12 @@ class GUI:
         print("Prediction: ", result)
 
         # GUI
-        MAX_COLUMNS = 5
-        MAX_ROWS = 2
+        max_columns = 5
+        max_rows = 2
 
         for i in range(1, len(test_images) + 1):
-            plt.subplot(MAX_ROWS, MAX_COLUMNS, i)
-            plt.imshow(Parser.load_full_size_image(TEST_IMAGES[i - 1]), cmap="gray")
+            plt.subplot(max_rows, max_columns, i)
+            plt.imshow(Parser.load_full_size_image(test_images[i - 1]), cmap="gray")
             if result[i - 1] == 1:
                 plt.title("Aircraft")
             else:
@@ -134,7 +133,6 @@ class GUI:
 
         plt.show()
         print("past plt")
-
 
     def file_selector(self):
         """

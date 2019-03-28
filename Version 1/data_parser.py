@@ -116,10 +116,10 @@ class Data:
     @staticmethod
     def create_training_data(x, y):
         """
-        Returns resized data for training using newly gen images
-        :param x:
-        :param y:
-        :return: images, labels for training
+        Returns resized hog data for training using newly gen images
+        :param x: size
+        :param y: size
+        :return: hog array, labels for training
         """
         temp_images = []
         temp_labels = []

@@ -3,21 +3,20 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import classification_report
 from sklearn.svm import SVC
 from data_parser import Data
+from sklearn.model_selection import cross_val_score
 
+sizes = [300, 150, 75]
+for size in sizes:
 
-training_set, training_labels = Data.create_realistic_hog_data_set(100)
-samples = len(training_set)
-training_set = training_set.reshape((samples, -1))
+    training_set, training_labels = Data.create_training_data(size, size)
 
-X_train, X_test, y_train, y_test = \
-    train_test_split(training_set, training_labels, test_size=0.5, random_state=0)
+    classifier = SVC(C=10, gamma=0.0001)
+    scores = cross_val_score(classifier, training_set, training_labels, cv=10)
+    print(size, "x", size)
 
-tuning_parameters = [
-    {'kernel': ['rbf'], 'gamma': [0.0001, 0.001, 0.01, 0.1, 1, 10, 100, 1000, 1e-10],
-     'C': [0.001, 0.1, 1, 10, 100, 1000]}]
+    total = 0
+    for score in scores:
+        total += score
 
-classifier = GridSearchCV(SVC(), tuning_parameters, scoring="precision", cv=5)
-
-classifier.fit(X_train, y_train)
-
-print(classifier.best_params_)
+    print(scores)
+    print("Average: ", total / len(scores) , "\n")
