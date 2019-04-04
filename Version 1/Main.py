@@ -97,7 +97,6 @@ class GUI:
     def image_search(self):
         """
         searches images for aircraft
-        :return:
         """
         # training_set, training_labels = Data.create_resized_hog_data_set(int(self.x.get()), int(self.y.get()))
 
@@ -138,7 +137,7 @@ class GUI:
         """
         sets image_path to users choice using file dialog
         """
-        Tk().withdraw()  # we don't want a full GUI, so keep the root window from appearing
+        Tk().withdraw()  # stop root window from appearing
         self.image_path = askopenfilename()  # show an "Open" dialog box and return the path to the selected file
         self.label_image_path.set(self.image_path[-7:])
 

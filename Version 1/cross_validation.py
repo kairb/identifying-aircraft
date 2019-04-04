@@ -5,7 +5,7 @@ from sklearn.svm import SVC
 from data_parser import Data
 from sklearn.model_selection import cross_val_score
 
-sizes = [300, 150, 75]
+sizes = [800, 400, 200, 100, 50]
 for size in sizes:
 
     training_set, training_labels = Data.create_training_data(size, size)
@@ -19,4 +19,6 @@ for size in sizes:
         total += score
 
     print(scores)
-    print("Average: ", total / len(scores) , "\n")
+    print("Average: ", total / len(scores), "\n")
+    scores = 0
+    classifier = 0

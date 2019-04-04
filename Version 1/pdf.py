@@ -17,13 +17,18 @@ class PDF:
         :return: none
         '''
         result_path = "../Results/"
+        aircraft_path = result_path + "Aircraft/"
+        ground_path = result_path + "Ground/"
         i = 0
         print("image len", len(images))
         for image in images:
-            #ImageDraw.Draw(image).text((0, 0), str(predictions[i]) + str(probabilities[i]), (255, 0, 0))
             img = Image.fromarray(image)
             draw = ImageDraw.Draw(img)
-            #font = ImageFont.truetype("sans-serif.ttf", 16)
-            draw.text((0, 0), str(predictions[i]) + str(probabilities[i]), (255, 0, 0))
-            img.save(result_path + str(i) + ".png")
+            if probabilities[i][1] > 0.4:
+                draw.text((0, 0),str(probabilities[i]), (255, 0, 0))
+            else:
+                draw.text((0, 0),str(probabilities[i]), (255, 0, 0))
+
+            img.save(ground_path + str(i) + ".png")
+
             i += 1
