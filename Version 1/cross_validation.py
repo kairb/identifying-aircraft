@@ -5,7 +5,7 @@ from sklearn.svm import SVC
 from data_parser import Data
 from sklearn.model_selection import cross_val_score
 
-sizes = [800, 400, 200, 100, 50]
+sizes = [400,300]
 for size in sizes:
 
     training_set, training_labels = Data.create_training_data(size, size)

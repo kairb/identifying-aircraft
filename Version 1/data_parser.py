@@ -125,17 +125,18 @@ class Data:
         temp_labels = []
         aircraft_path = "../Aircraft/"
         ground_path = "../Ground/"
-        for image in os.listdir(aircraft_path):
-            temp_images.append(
-                HOG.create_hog_image(
-                    Parser.rotate_image(Parser.resize_image(Parser.load_image_from_path(aircraft_path + image), x, y))))
-            temp_labels.append(1)
 
         for image in os.listdir(ground_path):
             temp_images.append(
                 HOG.create_hog_image(
                     Parser.rotate_image(Parser.resize_image(Parser.load_image_from_path(ground_path + image), x, y))))
             temp_labels.append(0)
+
+        for image in os.listdir(aircraft_path):
+            temp_images.append(
+                HOG.create_hog_image(
+                    Parser.rotate_image(Parser.resize_image(Parser.load_image_from_path(aircraft_path + image), x, y))))
+            temp_labels.append(1)
 
         images = np.asarray(temp_images)
         labels = np.ravel(temp_labels)

@@ -5,7 +5,7 @@ from matplotlib import pyplot as plt
 from tkinter.filedialog import askopenfilename
 from image_parser import Parser
 from PIL import Image, ImageTk
-from pdf import PDF
+from save import Save
 
 
 class GUI:
@@ -18,10 +18,10 @@ class GUI:
         self.x, self.y, self.x_step, self.y_step = StringVar(), StringVar(), StringVar(), StringVar()
         self.x.set("250")
         self.y.set("250")
-        self.x_step.set("30")
-        self.y_step.set("30")
+        self.x_step.set("50")
+        self.y_step.set("50")
         self.root.title("Aircraft Identification")
-        self.image_path = "../Airports/3.png"
+        self.image_path = "../Airports/7.png"
         self.label_image_path = StringVar()
         self.label_image_path.set(self.image_path[-7:])
 
@@ -118,20 +118,8 @@ class GUI:
         for i in range(len(result)):
             print(result[i], "Probability  ", probability[i])
 
-        PDF.write_to_folder(images, result, probability)
+        Save.write_to_folder(images, result, probability)
 
-        MAX_COLUMNS = 5
-        MAX_ROWS = 10
-
-        for i in range(1, 50 + 1):
-            plt.subplot(MAX_ROWS, MAX_COLUMNS, i)
-            plt.imshow(images[i - 1], cmap="gray")
-            label = str(result[i - 1]) + str(probability[i - 1])
-            plt.title(label)
-            plt.axis('off')
-
-        plt.show()
-        print("past plt")
 
     def file_selector(self):
         """

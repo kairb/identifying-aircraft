@@ -43,7 +43,7 @@ class Parser:
         :param image_number: airport number to load
         :return: returns image of airport
         """
-        return cv.imread("../Airports/" + str(image_number) + ".png", 0)
+        return cv.imread("../Airports/" + str(image_number) + ".PNG", 0)
 
     @staticmethod
     def resize_image(image, x, y):
