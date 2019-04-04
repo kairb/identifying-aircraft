@@ -25,10 +25,11 @@ class PDF:
             img = Image.fromarray(image)
             draw = ImageDraw.Draw(img)
             if probabilities[i][1] > 0.4:
-                draw.text((0, 0),str(probabilities[i]), (255, 0, 0))
+                draw.text((0, 0), str(probabilities[i]), (255, 0, 0))
             else:
-                draw.text((0, 0),str(probabilities[i]), (255, 0, 0))
+                draw.text((0, 0), str(probabilities[i]), (255, 0, 0))
 
             img.save(ground_path + str(i) + ".png")
 
             i += 1
+            ##comment
