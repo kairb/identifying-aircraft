@@ -54,4 +54,4 @@ class Save:
         """
         lowercase_str = uuid.uuid4().hex
         img = Image.fromarray(image)
-        img.save(self.HEAT_MAP_PATH + lowercase_str + ".png")
+        img.save(self.SEARCH_RESULTS_PATH + lowercase_str + ".png")
