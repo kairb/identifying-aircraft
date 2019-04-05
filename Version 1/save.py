@@ -1,56 +1,57 @@
 from PIL import Image, ImageDraw
-import os
+import uuid
 
 
 class Save:
-    @staticmethod
-    def write_to_pd(images):
-        for image in images:
-            im = Image.fromarray(image)
 
-    @staticmethod
-    def write_to_folder(images, predictions, probabilities):
+    def __init__(self):
+        self.RESULT_PATH = "../Results/"
+        self.AIRCRAFT_PATH = self.RESULT_PATH + "Aircraft/"
+        self.GROUND_PATH = self.RESULT_PATH + "Ground/"
+        self.HEAT_MAP_PATH = self.RESULT_PATH + "Heatmaps/"
+        self.SEARCH_RESULTS_PATH = self.RESULT_PATH + "Search/"
+
+        pass
+
+    def write_to_folder(self, images, probabilities):
         '''
-        saves images to results folder with probabilites and predictions
+        saves images to results folder with probabilities and predictions
         :param images: images array
-        :param predictions: prediction array
         :param probabilities: array of probabilities
         :return: none
         '''
 
-        ##Save.clear_results_output()
-        result_path = "../Results/"
-        aircraft_path = result_path + "Aircraft/"
-        ground_path = result_path + "Ground/"
         i = 0
         for image in images:
             img = Image.fromarray(image)
             draw = ImageDraw.Draw(img)
+            lowercase_str = uuid.uuid4().hex
             if probabilities[i][1] > 0.4:
                 draw.text((0, 0), str(probabilities[i]), (255, 0, 0))
-                img.save(aircraft_path + str(i) + ".png")
+                img.save(self.AIRCRAFT_PATH + lowercase_str + ".png")
 
             else:
                 draw.text((0, 0), str(probabilities[i]), (255, 0, 0))
-                img.save(ground_path + str(i) + ".png")
+                img.save(self.GROUND_PATH + lowercase_str + ".png")
 
             i += 1
 
-#
-#     @staticmethod
-#     def clear_results_output():
-#         result_path = "../Results/"
-#         aircraft_path = result_path + "Aircraft/"
-#         ground_path = result_path + "Ground/"
-#         files = os.listdir(result_path)
-#
-#         for file in files:
-#             os.remove(result_path + file)
-#
-#         os.mkdir()
-#
-#
-# Save.clear_results_output()
+    def save_heat_map(self,image):
+        """
+        Saves heat map to heat map path
+        :param image: image
+        :return: none
+        """
+        lowercase_str = uuid.uuid4().hex
+        img = Image.fromarray(image)
+        img.save(self.HEAT_MAP_PATH + lowercase_str + ".png")
 
-
-# https://www.tutorialspoint.com/How-to-delete-all-files-in-a-directory-with-Python
+    def save_search_results(self, image):
+        """
+        saves
+        :param image:
+        :return:
+        """
+        lowercase_str = uuid.uuid4().hex
+        img = Image.fromarray(image)
+        img.save(self.HEAT_MAP_PATH + lowercase_str + ".png")

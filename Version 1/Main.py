@@ -1,14 +1,12 @@
 from tkinter import *
 from data_parser import Data
 from sklearn import svm
-from matplotlib import pyplot as plt
+import matplotlib.pyplot as plt
 from tkinter.filedialog import askopenfilename
 from image_parser import Parser
-from PIL import Image, ImageTk
-from save import Save
 from drawing import Draw
 import numpy as np
-import matplotlib.cm as cm
+from save import Save
 
 
 class GUI:
@@ -27,6 +25,7 @@ class GUI:
         self.image_path = "../Airports/12.png"
         self.label_image_path = StringVar()
         self.label_image_path.set(self.image_path[-7:])
+        self.save = Save()
 
     def home(self):
         """
@@ -72,30 +71,30 @@ class GUI:
         test_images = [95, 195, 96, 97, 198, 88, 98, 99, 94, 191]
 
         training_set, training_labels = Data.create_realistic_hog_data_set(training_set_size)
-        test_images = Data.create_realistic_hog_test_set(test_images)
+        test_set = Data.create_realistic_hog_test_set(test_images)
 
-        clf = svm.SVC(gamma=0.0001, C=10)
+        clf = svm.SVC(gamma=0.0001, C=10, probability=True)
 
         # fit training data
         clf.fit(training_set, training_labels)
 
-        result = clf.predict(test_images)
-        print("Prediction: ", result)
+        result = clf.predict(test_set)
+        probabilities = clf.predict_proba(test_set)
 
         # GUI
-        max_columns = 5
-        max_rows = 2
+        MAX_COLUMNS = 5
+        MAX_ROWS = 2
 
         for i in range(1, len(test_images) + 1):
-            plt.subplot(max_rows, max_columns, i)
+            plt.subplot(MAX_ROWS, MAX_COLUMNS, i)
             plt.imshow(Parser.load_full_size_image(test_images[i - 1]), cmap="gray")
             if result[i - 1] == 1:
-                plt.title("Aircraft")
+                plt.title('Aircraft %1.2f' % probabilities[i - 1][1])
             else:
-                plt.title("Ground")
+                plt.title('Ground %1.2f' % probabilities[i - 1][0])
             plt.axis('off')
 
-        plt.show()
+        plt.show(block=False)
 
     def image_search(self):
         """
@@ -113,20 +112,16 @@ class GUI:
         # fit training data
         clf.fit(training_set, training_labels)
 
-        result = clf.predict(test_images)
+        probabilities = clf.predict_proba(test_images)
 
-        probability = clf.predict_proba(test_images)
-
-
-        # Save.write_to_folder(images, result, probability)
         draw = Draw(np.asarray(Parser.load_image_from_path(self.image_path)))
-        temp = draw.draw_boxes(probability, int(self.x.get()), int(self.y.get()), int(self.x_step.get()),
-                                             int(self.y_step.get()))
+        self.save.save_search_results(
+            draw.draw_boxes(probabilities, int(self.x.get()), int(self.y.get()), int(self.x_step.get()),
+                            int(self.y_step.get())))
 
-        temp1 = draw.draw_colour_gradient(probability, int(self.x.get()), int(self.y.get()), int(self.x_step.get()),
-                               int(self.y_step.get()))
-        plt.imshow(temp)
-        plt.show()
+        self.save.save_heat_map(
+            draw.draw_colour_gradient(probabilities, int(self.x.get()), int(self.y.get()), int(self.x_step.get()),
+                                      int(self.y_step.get())))
 
     def file_selector(self):
         """
@@ -138,9 +133,6 @@ class GUI:
 
     def run(self):
         self.root.mainloop()
-
-    def generate_pdf(self):
-        pass
 
 
 if __name__ == "__main__":
