@@ -145,7 +145,6 @@ class Data:
     @staticmethod
     def create_airport_hog_data_set(path, x_step, y_step, size_x, size_y):
         image = np.asarray(Parser.load_image_from_path(path))
-        print(image.shape)
         images = []
         hog_subsections = []
         for x in range(0, len(image[0]) - size_x + 1, x_step):

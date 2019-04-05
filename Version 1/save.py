@@ -23,7 +23,6 @@ class Save:
         aircraft_path = result_path + "Aircraft/"
         ground_path = result_path + "Ground/"
         i = 0
-        print("image len", len(images))
         for image in images:
             img = Image.fromarray(image)
             draw = ImageDraw.Draw(img)

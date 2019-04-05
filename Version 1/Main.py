@@ -6,6 +6,9 @@ from tkinter.filedialog import askopenfilename
 from image_parser import Parser
 from PIL import Image, ImageTk
 from save import Save
+from drawing import Draw
+import numpy as np
+import matplotlib.cm as cm
 
 
 class GUI:
@@ -21,7 +24,7 @@ class GUI:
         self.x_step.set("50")
         self.y_step.set("50")
         self.root.title("Aircraft Identification")
-        self.image_path = "../Airports/7.png"
+        self.image_path = "../Airports/12.png"
         self.label_image_path = StringVar()
         self.label_image_path.set(self.image_path[-7:])
 
@@ -98,7 +101,6 @@ class GUI:
         """
         searches images for aircraft
         """
-        # training_set, training_labels = Data.create_resized_hog_data_set(int(self.x.get()), int(self.y.get()))
 
         training_set, training_labels = Data.create_training_data(int(self.x.get()), int(self.y.get()))
 
@@ -115,11 +117,16 @@ class GUI:
 
         probability = clf.predict_proba(test_images)
 
-        for i in range(len(result)):
-            print(result[i], "Probability  ", probability[i])
 
-        Save.write_to_folder(images, result, probability)
+        # Save.write_to_folder(images, result, probability)
+        draw = Draw(np.asarray(Parser.load_image_from_path(self.image_path)))
+        temp = draw.draw_boxes(probability, int(self.x.get()), int(self.y.get()), int(self.x_step.get()),
+                                             int(self.y_step.get()))
 
+        temp1 = draw.draw_colour_gradient(probability, int(self.x.get()), int(self.y.get()), int(self.x_step.get()),
+                               int(self.y_step.get()))
+        plt.imshow(temp)
+        plt.show()
 
     def file_selector(self):
         """

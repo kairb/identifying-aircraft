@@ -1,13 +1,9 @@
-import numpy as np
-from PIL import Image, ImageDraw
-from image_parser import Parser
-
-
+import matplotlib.pyplot as plt
 import numpy as np
 import cv2 as cv
 
 
-class Overlay:
+class Draw:
     image = None
 
     def __init__(self, image):
@@ -18,41 +14,39 @@ class Overlay:
 
     def draw_boxes(self, probabilities, size_x,size_y,x_step,y_step):
 
-        i = 0
-        for x in range(0, len(self.image[0]) - size_x + 1, x_step):
-            for y in range(0, len(img) - size_y + 1, y_step):
-                if probabilities[i][1] > 0.4:
-                    img = cv.rectangle(self.image, (x,y), (x+size_x, y + size_y))
-                    draw.rectangle([x, y, size_x, size_y], outline="red")
-                i += 1
-
-        return img
-
-
-
-
-
-class Draw:
-
-
-    @staticmethod
-    def draw_predictions(predictions, image_path, size_x, size_y, x_step, y_step):
         """
-        draws boxes around predictions
-        :param predictions: list of predictions
-        :param image_path: path of image to draw predictions om
-        :return: image with predictions on as np array
+        Draws boxes over image dependent on probabilities
+        :param probabilities: List of probabilities
+        :param size_x: size of search area
+        :param size_y: size of search area
+        :param x_step: x step of search areas
+        :param y_step: y step of search area
+        :return: numpy array. image with boxes showing aircraft locations
         """
-        img = Image.fromarray(Parser.load_image_from_path(image_path))
-        draw = ImageDraw.Draw(img)
+        img = self.image
         i = 0
         for x in range(0, len(img[0]) - size_x + 1, x_step):
             for y in range(0, len(img) - size_y + 1, y_step):
-                if predictions[i] == 1:
-                    draw.rectangle([x, y, size_x, size_y], outline="red")
+                if probabilities[i][1] > 0.4:
+                    img = cv.rectangle(img, (x,y), (x+size_x, y + size_y),(0,255,0),3)
                 i += 1
-
+        print("boxes", img.shape)
         return img
 
-Draw.draw_predictions()
-# https://pillow.readthedocs.io/en/3.1.x/reference/ImageDraw.html
+    def draw_colour_gradient(self,probabilities, size_x,size_y,x_step,y_step):
+        blank = np.zeros((len(self.image), len(self.image[0])))
+        print("blank", blank.shape)
+        product = []
+        i = 0
+        for x in range(0, len(blank[0]) - size_x + 1, x_step):
+            for y in range(0, len(blank) - size_y + 1, y_step):
+                if probabilities[i][1] > 0.4:
+                    blank = np.zeros((len(self.image), len(self.image[0])))
+                    intensity = probabilities[i][1] * 255
+                    temp = cv.rectangle(blank, (x, y), (x + size_x, y + size_y), intensity, -1)
+                    product.append(temp.flatten())
+                i += 1
+        img = np.average(product,axis = 0)
+        img = img.reshape((len(self.image), len(self.image[0])))
+        print("average", img.shape)
+        return img
