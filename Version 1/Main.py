@@ -7,6 +7,7 @@ from image_parser import Parser
 from drawing import Draw
 import numpy as np
 from save import Save
+from random import randint
 
 
 class GUI:
@@ -19,8 +20,8 @@ class GUI:
         self.x, self.y, self.x_step, self.y_step = StringVar(), StringVar(), StringVar(), StringVar()
         self.x.set("250")
         self.y.set("250")
-        self.x_step.set("50")
-        self.y_step.set("50")
+        self.x_step.set("100")
+        self.y_step.set("100")
         self.root.title("Aircraft Identification")
         self.image_path = "../Airports/12.png"
         self.label_image_path = StringVar()
@@ -68,7 +69,10 @@ class GUI:
         starts classification of simple images
         """
         training_set_size = 90
-        test_images = [95, 195, 96, 97, 198, 88, 98, 99, 94, 191]
+        test_images = []
+        for i in range(0, 5):
+            test_images.append(randint(90, 100))
+            test_images.append(randint(190, 200))
 
         training_set, training_labels = Data.create_realistic_hog_data_set(training_set_size)
         test_set = Data.create_realistic_hog_test_set(test_images)

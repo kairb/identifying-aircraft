@@ -154,5 +154,3 @@ class Data:
                 hog_subsections.append(HOG.create_hog_image(sub_image))
 
         return hog_subsections, images
-
-# Data.create_airport_hog_data_set(Parser.load_airport(2), 10, 10, 50)

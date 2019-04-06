@@ -25,6 +25,7 @@ class Parser:
 
     @staticmethod
     def load_full_size_image(image_number):
+
         return cv.imread("../Images400x400/" + str(image_number) + ".png", 0)
 
     @staticmethod

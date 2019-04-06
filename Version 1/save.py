@@ -36,7 +36,7 @@ class Save:
 
             i += 1
 
-    def save_heat_map(self,image):
+    def save_heat_map(self, image):
         """
         Saves heat map to heat map path
         :param image: image
@@ -44,14 +44,16 @@ class Save:
         """
         lowercase_str = uuid.uuid4().hex
         img = Image.fromarray(image)
-        img.save(self.HEAT_MAP_PATH + lowercase_str + ".png")
+        img.convert('RGB').save(self.HEAT_MAP_PATH + lowercase_str + ".png")
 
     def save_search_results(self, image):
         """
-        saves
-        :param image:
-        :return:
+        saves search results to search result path
+        :param image:image
+        :return: none
         """
         lowercase_str = uuid.uuid4().hex
         img = Image.fromarray(image)
-        img.save(self.SEARCH_RESULTS_PATH + lowercase_str + ".png")
+        img.convert('RGB').save(self.SEARCH_RESULTS_PATH + lowercase_str + ".png")
+
+
