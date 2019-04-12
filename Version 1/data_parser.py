@@ -143,10 +143,13 @@ class Data:
         return images, labels
 
     @staticmethod
-    def create_airport_hog_data_set(path, x_step, y_step, size_x, size_y):
+    def create_airport_hog_data_set(path, x_steps, y_steps, size_x, size_y):
         image = np.asarray(Parser.load_image_from_path(path))
         images = []
         hog_subsections = []
+        x_step = int((len(image[0]) - size_x) / x_steps)
+        y_step = int((len(image) - size_y) / y_steps)
+
         for x in range(0, len(image[0]) - size_x + 1, x_step):
             for y in range(0, len(image) - size_y + 1, y_step):
                 sub_image = image[y:y + size_y, x: x + size_x]

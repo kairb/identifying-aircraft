@@ -11,7 +11,6 @@ class Save:
         self.HEAT_MAP_PATH = self.RESULT_PATH + "Heatmaps/"
         self.SEARCH_RESULTS_PATH = self.RESULT_PATH + "Search/"
 
-        pass
 
     def write_to_folder(self, images, probabilities):
         '''

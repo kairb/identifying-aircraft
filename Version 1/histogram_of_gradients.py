@@ -46,6 +46,5 @@ class HOG:
         ax2.set_title('Histogram of Oriented Gradients')
         plt.show()
 
-#
 # HOG.display_hog_image(Parser.load_image(49))
 # HOG.display_hog_image(Parser.load_image(50))

@@ -17,11 +17,11 @@ class GUI:
         self.right_frame = Frame(self.root).grid(row=0, column=10)
         self.classification_method = IntVar()
         self.classification_method.set(2)
-        self.x, self.y, self.x_step, self.y_step = StringVar(), StringVar(), StringVar(), StringVar()
+        self.x, self.y, self.x_steps, self.y_steps = StringVar(), StringVar(), StringVar(), StringVar()
         self.x.set("250")
         self.y.set("250")
-        self.x_step.set("100")
-        self.y_step.set("100")
+        self.x_steps.set("5")
+        self.y_steps.set("5")
         self.root.title("Aircraft Identification")
         self.image_path = "../Airports/12.png"
         self.label_image_path = StringVar()
@@ -33,15 +33,15 @@ class GUI:
         sets the homepage options
         """
         Label(self.left_frame, text="Select classification method and options").grid(row=0, column=0)
-
-        Button(self.left_frame, text="Select image", command=self.file_selector).grid(row=1, column=0, sticky="W")
-        Label(self.left_frame, textvariable=self.label_image_path).grid(row=1, column=0, sticky="E")
-
-        Radiobutton(self.left_frame, text="Normal", variable=self.classification_method, value=1).grid(row=2, column=0,
-                                                                                                       sticky="W")
-        Radiobutton(self.left_frame, text="Image search", variable=self.classification_method, value=2).grid(row=3,
+        Radiobutton(self.left_frame, text="Standalone", variable=self.classification_method, value=1).grid(row=1,
+                                                                                                           column=0,
+                                                                                                           sticky="W")
+        Radiobutton(self.left_frame, text="Image search", variable=self.classification_method, value=2).grid(row=2,
                                                                                                              column=0,
                                                                                                              sticky="W")
+
+        Button(self.left_frame, text="Select image", command=self.file_selector).grid(row=3, column=0, sticky="W")
+        Label(self.left_frame, textvariable=self.label_image_path).grid(row=3, column=0, sticky="E")
 
         Label(self.left_frame, text="x").grid(row=4, column=0, sticky="W")
         Entry(self.left_frame, textvariable=self.x).grid(row=4, column=0)
@@ -49,11 +49,11 @@ class GUI:
         Label(self.left_frame, text="y").grid(row=5, column=0, sticky="W")
         Entry(self.left_frame, textvariable=self.y).grid(row=5, column=0)
 
-        Label(self.left_frame, text="x step").grid(row=6, column=0, sticky="W")
-        Entry(self.left_frame, textvariable=self.x_step).grid(row=6, column=0)
+        Label(self.left_frame, text="x steps").grid(row=6, column=0, sticky="W")
+        Entry(self.left_frame, textvariable=self.x_steps).grid(row=6, column=0)
 
-        Label(self.left_frame, text="y step").grid(row=7, column=0, sticky="W")
-        Entry(self.left_frame, textvariable=self.y_step).grid(row=7, column=0)
+        Label(self.left_frame, text="y steps").grid(row=7, column=0, sticky="W")
+        Entry(self.left_frame, textvariable=self.y_steps).grid(row=7, column=0)
 
         Button(self.left_frame, text="Start", command=self.start_classification).grid(row=8)
 
@@ -107,8 +107,8 @@ class GUI:
 
         training_set, training_labels = Data.create_training_data(int(self.x.get()), int(self.y.get()))
 
-        test_images, images = Data.create_airport_hog_data_set(self.image_path, int(self.x_step.get()),
-                                                               int(self.y_step.get()),
+        test_images, images = Data.create_airport_hog_data_set(self.image_path, int(self.x_steps.get()),
+                                                               int(self.y_steps.get()),
                                                                int(self.x.get()), int(self.y.get()))
 
         clf = svm.SVC(gamma=0.0001, C=10, probability=True)
@@ -120,12 +120,12 @@ class GUI:
 
         draw = Draw(np.asarray(Parser.load_image_from_path(self.image_path)))
         self.save.save_search_results(
-            draw.draw_boxes(probabilities, int(self.x.get()), int(self.y.get()), int(self.x_step.get()),
-                            int(self.y_step.get())))
+            draw.draw_boxes(probabilities, int(self.x.get()), int(self.y.get()), int(self.x_steps.get()),
+                            int(self.y_steps.get())))
 
         self.save.save_heat_map(
-            draw.draw_colour_gradient(probabilities, int(self.x.get()), int(self.y.get()), int(self.x_step.get()),
-                                      int(self.y_step.get())))
+            draw.draw_colour_gradient(probabilities, int(self.x.get()), int(self.y.get()), int(self.x_steps.get()),
+                                      int(self.y_steps.get())))
 
     def file_selector(self):
         """

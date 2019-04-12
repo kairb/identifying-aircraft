@@ -13,7 +13,7 @@ class Draw:
     def get_image(self):
         return self.image
 
-    def draw_boxes(self, probabilities, size_x, size_y, x_step, y_step):
+    def draw_boxes(self, probabilities, size_x, size_y, x_steps, y_steps):
 
         """
         Draws boxes over image dependent on probabilities
@@ -26,6 +26,8 @@ class Draw:
         """
         img = self.image
         i = 0
+        x_step = int((len(img[0]) - size_x) / x_steps)
+        y_step = int((len(img) - size_y) / y_steps)
         for x in range(0, len(img[0]) - size_x + 1, x_step):
             for y in range(0, len(img) - size_y + 1, y_step):
                 if probabilities[i][1] > 0.4:
@@ -34,10 +36,12 @@ class Draw:
                 i += 1
         return img
 
-    def draw_colour_gradient(self, probabilities, size_x, size_y, x_step, y_step):
+    def draw_colour_gradient(self, probabilities, size_x, size_y, x_steps, y_steps):
         blank = np.zeros((len(self.image), len(self.image[0])))
         product = []
         i = 0
+        x_step = int((len(blank[0]) - size_x) / x_steps)
+        y_step = int((len(blank) - size_y) / y_steps)
         for x in range(0, len(blank[0]) - size_x + 1, x_step):
             for y in range(0, len(blank) - size_y + 1, y_step):
                 if probabilities[i][1] > 0.4:

@@ -8,11 +8,11 @@ from sklearn.model_selection import cross_val_score
 sizes = [400,300]
 for size in sizes:
 
-    training_set, training_labels = Data.create_training_data(size, size)
-
+    # training_set, training_labels = Data.create_training_data(size, size)
+    training_set, training_labels = Data.create_realistic_hog_data_set(90)
     classifier = SVC(C=10, gamma=0.0001)
     scores = cross_val_score(classifier, training_set, training_labels, cv=10)
-    print(size, "x", size)
+    # print(size, "x", size)
 
     total = 0
     for score in scores:
