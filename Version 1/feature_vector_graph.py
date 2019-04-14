@@ -68,4 +68,4 @@ class Graphs:
         return aircraft_average, ground_average
 
 #Graphs.create_fd_scatter_graph()
-Graphs.create_combined_graph()
+#Graphs.create_combined_graph()

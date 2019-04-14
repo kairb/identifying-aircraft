@@ -20,8 +20,8 @@ class GUI:
         self.x, self.y, self.x_steps, self.y_steps = StringVar(), StringVar(), StringVar(), StringVar()
         self.x.set("250")
         self.y.set("250")
-        self.x_steps.set("5")
-        self.y_steps.set("5")
+        self.x_steps.set("8")
+        self.y_steps.set("8")
         self.root.title("Aircraft Identification")
         self.image_path = "../Airports/12.png"
         self.label_image_path = StringVar()
@@ -116,16 +116,31 @@ class GUI:
         # fit training data
         clf.fit(training_set, training_labels)
 
+        #obtain probabilities
         probabilities = clf.predict_proba(test_images)
 
+        #drawing of results.
         draw = Draw(np.asarray(Parser.load_image_from_path(self.image_path)))
-        self.save.save_search_results(
-            draw.draw_boxes(probabilities, int(self.x.get()), int(self.y.get()), int(self.x_steps.get()),
-                            int(self.y_steps.get())))
 
-        self.save.save_heat_map(
-            draw.draw_colour_gradient(probabilities, int(self.x.get()), int(self.y.get()), int(self.x_steps.get()),
-                                      int(self.y_steps.get())))
+        boxes = draw.draw_boxes(probabilities, int(self.x.get()), int(self.y.get()), int(self.x_steps.get()),
+                                int(self.y_steps.get()))
+        print(boxes.shape)
+
+        self.save.save_search_results(boxes)
+
+        heat = draw.draw_colour_gradient(probabilities, int(self.x.get()), int(self.y.get()), int(self.x_steps.get()),
+                                         int(self.y_steps.get()))
+        print(heat.shape)
+        self.save.save_heat_map(heat)
+
+        plt.subplot(111)
+        plt.title("heatmap")
+        plt.imshow(heat, cmap= plt.gray())
+        plt.subplot(212)
+        plt.title("Search results")
+        plt.imshow(boxes)
+
+        plt.show(block=False)
 
     def file_selector(self):
         """
