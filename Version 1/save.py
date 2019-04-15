@@ -10,7 +10,14 @@ class Save:
         self.GROUND_PATH = self.RESULT_PATH + "Ground/"
         self.HEAT_MAP_PATH = self.RESULT_PATH + "Heatmaps/"
         self.SEARCH_RESULTS_PATH = self.RESULT_PATH + "Search/"
+        self.uuid = None
 
+    def new_uuid(self):
+        """
+        generates new UUID
+        :return:
+        """
+        self.uuid = uuid.uuid4().hex
 
     def write_to_folder(self, images, probabilities):
         '''
@@ -41,9 +48,8 @@ class Save:
         :param image: image
         :return: none
         """
-        lowercase_str = uuid.uuid4().hex
         img = Image.fromarray(image)
-        img.convert('RGB').save(self.HEAT_MAP_PATH + lowercase_str + ".png")
+        img.convert('RGB').save(self.HEAT_MAP_PATH + self.uuid + ".png")
 
     def save_search_results(self, image):
         """
@@ -51,8 +57,5 @@ class Save:
         :param image:image
         :return: none
         """
-        lowercase_str = uuid.uuid4().hex
         img = Image.fromarray(image)
-        img.convert('RGB').save(self.SEARCH_RESULTS_PATH + lowercase_str + ".png")
-
-
+        img.convert('RGB').save(self.SEARCH_RESULTS_PATH + self.uuid + ".png")

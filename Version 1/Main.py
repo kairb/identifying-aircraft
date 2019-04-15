@@ -126,6 +126,7 @@ class GUI:
                                 int(self.y_steps.get()))
         print(boxes.shape)
 
+        self.save.new_uuid()
         self.save.save_search_results(boxes)
 
         heat = draw.draw_colour_gradient(probabilities, int(self.x.get()), int(self.y.get()), int(self.x_steps.get()),
