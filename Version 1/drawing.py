@@ -47,7 +47,8 @@ class Draw:
                 if probabilities[i][1] > 0.4:
                     blank = np.zeros((len(self.image), len(self.image[0])))
                     intensity = probabilities[i][1] * 255
-                    temp = cv.rectangle(blank, (x, y), (x + size_x, y + size_y), intensity, -1)
+                    print(intensity)
+                    temp = cv.rectangle(blank, (x, y), (x + size_x, y + size_y), int(intensity), -1)
                     product.append(temp.flatten())
                 i += 1
         img = np.average(product, axis=0)

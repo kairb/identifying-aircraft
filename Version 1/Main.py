@@ -116,10 +116,10 @@ class GUI:
         # fit training data
         clf.fit(training_set, training_labels)
 
-        #obtain probabilities
+        # obtain probabilities
         probabilities = clf.predict_proba(test_images)
 
-        #drawing of results.
+        # drawing of results.
         draw = Draw(np.asarray(Parser.load_image_from_path(self.image_path)))
 
         boxes = draw.draw_boxes(probabilities, int(self.x.get()), int(self.y.get()), int(self.x_steps.get()),
@@ -135,7 +135,7 @@ class GUI:
 
         plt.subplot(111)
         plt.title("heatmap")
-        plt.imshow(heat, cmap= plt.gray())
+        plt.imshow(heat, cmap='hot', origin='lower', aspect='auto')
         plt.subplot(212)
         plt.title("Search results")
         plt.imshow(boxes)
