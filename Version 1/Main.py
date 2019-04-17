@@ -124,23 +124,19 @@ class GUI:
 
         boxes = draw.draw_boxes(probabilities, int(self.x.get()), int(self.y.get()), int(self.x_steps.get()),
                                 int(self.y_steps.get()))
-        print(boxes.shape)
 
         self.save.new_uuid()
         self.save.save_search_results(boxes)
 
         heat = draw.draw_colour_gradient(probabilities, int(self.x.get()), int(self.y.get()), int(self.x_steps.get()),
                                          int(self.y_steps.get()))
-        print(heat.shape)
         self.save.save_heat_map(heat)
-
-        plt.subplot(111)
-        plt.title("heatmap")
-        plt.imshow(heat, cmap='hot', origin='lower', aspect='auto')
+        plt.subplot(211)
+        plt.title("Heat map")
+        plt.imshow(heat, interpolation='nearest')
         plt.subplot(212)
         plt.title("Search results")
         plt.imshow(boxes)
-
         plt.show(block=False)
 
     def file_selector(self):
