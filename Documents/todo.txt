@@ -1,0 +1,15 @@
+Explain how the standalone and realistic data set were developed and how they differ in general
+Make subchapters about this and clean image section
+
+Show and explain errors and anomalies in the results
+
+Create diagram explaining large image search
+
+More information about HOG and talk about uses
+More information about SVMs
+Chapter on Computer vision
+-What an image is
+-different computer vision techniques
+-masks
+
+Extend conclusion
