@@ -1,8 +1,3 @@
+Complete design sub chapter
+Reference for every section
 
-
-- you could add a diagram and a section describing the design of your
-software. what functions/classes/scripts exist and how do they depend on
-each other?
-
-
-- References partially done

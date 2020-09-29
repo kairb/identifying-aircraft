@@ -1,0 +1,893 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="20e9e028-1eec-4fa7-81d4-abccf5f7b15b" name="Default Changelist" comment="matplolibupload">
+      <change beforePath="$PROJECT_DIR$/Documents/Final Report.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/Final Report.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/todo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/todo.txt" afterDir="false" />
+    </list>
+    <ignored path="Old/test.py" />
+    <ignored path=".idea/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-931082276">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="11" />
+          <entry key="project.open.time.10" value="8" />
+          <entry key="project.open.time.11" value="3" />
+          <entry key="project.open.time.12" value="3" />
+          <entry key="project.open.time.13" value="2" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.8" value="8" />
+          <entry key="project.open.time.9" value="5" />
+          <entry key="project.opened" value="34" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="CVResults" value="4" />
+          <entry key="PNG" value="66" />
+          <entry key="bat" value="3" />
+          <entry key="md" value="2" />
+          <entry key="png" value="63" />
+          <entry key="py" value="134" />
+          <entry key="txt" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Image" value="129" />
+          <entry key="Markdown" value="2" />
+          <entry key="PLAIN_TEXT" value="9" />
+          <entry key="Python" value="134" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="CVResults" value="75" />
+          <entry key="Python Console" value="43" />
+          <entry key="bat" value="30" />
+          <entry key="dummy" value="49" />
+          <entry key="md" value="200" />
+          <entry key="py" value="20263" />
+          <entry key="txt" value="2082" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Markdown" value="200" />
+          <entry key="PLAIN_TEXT" value="2236" />
+          <entry key="Python" value="20306" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Version 1/Main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="542">
+              <caret line="120" selection-start-line="120" selection-end-line="120" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/sklearn/externals/joblib/externals/cloudpickle/cloudpickle.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/Version 1/c_gamma_test.py" />
+        <option value="$PROJECT_DIR$/Old/test.py" />
+        <option value="$PROJECT_DIR$/Version 1/customCrossValidation.py" />
+        <option value="$PROJECT_DIR$/Version 1/Image_show.py" />
+        <option value="$PROJECT_DIR$/Version 1/test_set.py" />
+        <option value="$PROJECT_DIR$/Version 1/test_classifier.py" />
+        <option value="$PROJECT_DIR$/Test/test_set.py" />
+        <option value="$PROJECT_DIR$/Test/test_classifier.py" />
+        <option value="$PROJECT_DIR$/Version 1/__init__.py" />
+        <option value="$PROJECT_DIR$/Version 1/HistogramOfGradients.py" />
+        <option value="$PROJECT_DIR$/Version 1/test.py" />
+        <option value="$PROJECT_DIR$/Version 1/image_search.py" />
+        <option value="$PROJECT_DIR$/Version 1/classifier.py" />
+        <option value="$PROJECT_DIR$/Version 1/file_selector.py" />
+        <option value="$PROJECT_DIR$/Version 1/image_parser.py" />
+        <option value="$PROJECT_DIR$/Version 1/create_test_images.py" />
+        <option value="$PROJECT_DIR$/requirements.bat" />
+        <option value="$PROJECT_DIR$/Test/test.py" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/Version 1/data_parser.py" />
+        <option value="$PROJECT_DIR$/Version 1/Testing/cross_validation.py" />
+        <option value="$PROJECT_DIR$/Results/CVResults" />
+        <option value="$PROJECT_DIR$/Version 1/cross_validation.py" />
+        <option value="$PROJECT_DIR$/Version 1/Testing/CVResults" />
+        <option value="$PROJECT_DIR$/Version 1/histogram_of_gradients.py" />
+        <option value="$PROJECT_DIR$/Version 1/pdf.py" />
+        <option value="$PROJECT_DIR$/Version 1/save.py" />
+        <option value="$PROJECT_DIR$/Version 1/feature_vector_graph.py" />
+        <option value="$PROJECT_DIR$/Version 1/Main.py" />
+        <option value="$PROJECT_DIR$/Version 1/drawing.py" />
+        <option value="$PROJECT_DIR$/Documents/todo.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1720" />
+    <option name="height" value="930" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="capstone_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="capstone_project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="capstone_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="capstone_project" type="462c0819:PsiDirectoryNode" />
+              <item name="Documents" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="capstone_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="capstone_project" type="462c0819:PsiDirectoryNode" />
+              <item name="Version 1" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="settings.editor.selected.configurable" value="reference.idesettings.quicklists" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\University\Year 3\CE301\capstone_project\Version 1\Testing" />
+      <recent name="D:\University\Year 3\CE301\capstone_project\Version 1" />
+      <recent name="D:\University\Year 3\CE301\capstone_project\Testing" />
+      <recent name="D:\University\Year 3\CE301\capstone_project\Test" />
+      <recent name="D:\University\Year 3\CE301\capstone_project\test" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.Main">
+    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="capstone_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Version 1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Version 1/Main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="classifier" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="capstone_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Version 1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Version 1/classifier.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="cross_validation (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="capstone_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Version 1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Version 1/cross_validation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="feature_vector_graph" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="capstone_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Version 1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Version 1/feature_vector_graph.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="histogram_of_gradients" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="capstone_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Version 1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Version 1/histogram_of_gradients.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.Main" />
+      <item itemvalue="Python.cross_validation (1)" />
+      <item itemvalue="Python.classifier" />
+      <item itemvalue="Python.histogram_of_gradients" />
+      <item itemvalue="Python.feature_vector_graph" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Main" />
+        <item itemvalue="Python.feature_vector_graph" />
+        <item itemvalue="Python.histogram_of_gradients" />
+        <item itemvalue="Python.classifier" />
+        <item itemvalue="Python.cross_validation (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="20e9e028-1eec-4fa7-81d4-abccf5f7b15b" name="Default Changelist" comment="" />
+      <created>1543681398799</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1543681398799</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Created requirements.bat to install dependencies">
+      <created>1544301350893</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1544301350893</updated>
+    </task>
+    <task id="LOCAL-00002" summary="commit of ground images and test class to find best gamma and c values">
+      <created>1544482436301</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1544482436301</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Creation of histogram of oriented gradients used in image pre-processing. changed create data to return data and labels at once.">
+      <created>1548008268542</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1548008268542</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Creation of histogram of oriented gradients used in image pre-processing. changed create data to return data and labels at once.">
+      <created>1548165091915</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1548165091915</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Creation of test files. Histogram feature descriptor is now passed through svm. SVM can now identify aircraft">
+      <created>1549372171887</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1549372171887</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Created matplotlib pyplot gui that appears showing prediction results.">
+      <created>1549384791226</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1549384791227</updated>
+    </task>
+    <task id="LOCAL-00007" summary="created feature descriptor visualisation. Images are now rotated at random 90 degree intervals to make data set more realistic.">
+      <created>1549671675065</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1549671675065</updated>
+    </task>
+    <task id="LOCAL-00008" summary="created feature descriptor visualisation. Images are now rotated at random 90 degree intervals to make data set more realistic.">
+      <created>1549671695825</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1549671695825</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Created resizing methods and methods to iterate an image and pass segments through svm">
+      <created>1550691392227</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1550691392227</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Printed probabilities for each segment of larger image. Added 4.png (image of airport)">
+      <created>1550935441786</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1550935441786</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Created basic gui class">
+      <created>1550938822808</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1550938822808</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Basic changes to layout in attempt to divide into two frames. Added docstring comments to image_parser functions">
+      <created>1551632551346</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1551632551346</updated>
+    </task>
+    <task id="LOCAL-00013" summary="new images generated by new create_test_images, update of requirements.bat">
+      <created>1551802191674</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1551802191675</updated>
+    </task>
+    <task id="LOCAL-00014" summary="new images generated by new create_test_images, update of requirements.bat">
+      <created>1552137854815</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1552137854815</updated>
+    </task>
+    <task id="LOCAL-00015" summary="updated poster">
+      <created>1552312067727</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1552312067727</updated>
+    </task>
+    <task id="LOCAL-00016" summary="updated poster and abstract">
+      <created>1552312544988</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1552312544988</updated>
+    </task>
+    <task id="LOCAL-00017" summary="updates abstract">
+      <created>1552340948406</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1552340948406</updated>
+    </task>
+    <task id="LOCAL-00018" summary="added labels to x and y axis&#10;Removed call to method in HOG to remove runtime bug">
+      <created>1552341568697</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1552341568697</updated>
+    </task>
+    <task id="LOCAL-00019" summary="created function to create combined graph of image descriptor averages">
+      <created>1552342198922</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1552342198922</updated>
+    </task>
+    <task id="LOCAL-00020" summary="small updates to poster">
+      <created>1552342945476</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1552342945476</updated>
+    </task>
+    <task id="LOCAL-00021" summary="small updates to poster">
+      <created>1552404208894</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1552404208894</updated>
+    </task>
+    <task id="LOCAL-00022" summary="small updates to poster and abstract">
+      <created>1552417871309</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1552417871309</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Updated README.md">
+      <created>1552418142315</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1552418142315</updated>
+    </task>
+    <task id="LOCAL-00024" summary="minor updates to poster and abstract">
+      <created>1552419677085</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1552419677085</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Cross validation of new data set. Results stored in CVResults">
+      <created>1553787480726</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1553787480726</updated>
+    </task>
+    <task id="LOCAL-00026" summary="cross validation of data set. small changes to results directory">
+      <created>1554375563778</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1554375563778</updated>
+    </task>
+    <task id="LOCAL-00027" summary="cross validation of data set. small changes to results directory">
+      <created>1554375724021</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1554375724021</updated>
+    </task>
+    <task id="LOCAL-00028" summary="updated final report">
+      <created>1554908136909</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1554908136909</updated>
+    </task>
+    <task id="LOCAL-00029" summary="updated final report">
+      <created>1554925578346</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1554925578346</updated>
+    </task>
+    <task id="LOCAL-00030" summary="added plt window to display search results">
+      <created>1555244319016</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1555244319016</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Completed large image search section">
+      <created>1555247819754</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1555247819754</updated>
+    </task>
+    <task id="LOCAL-00032" summary="attempted to fix drawing bug">
+      <created>1555326323660</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1555326323660</updated>
+    </task>
+    <task id="LOCAL-00033" summary="update">
+      <created>1555330410735</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1555330410735</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Added matplolib image to save section">
+      <created>1555600093694</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1555600093694</updated>
+    </task>
+    <task id="LOCAL-00035" summary="minor spelling and grammar corrections">
+      <created>1555947790089</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1555947790089</updated>
+    </task>
+    <task id="LOCAL-00036" summary="matplolibupload of stanalone classification">
+      <created>1556182688307</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1556182688307</updated>
+    </task>
+    <task id="LOCAL-00037" summary="finalising report">
+      <created>1556242203575</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1556242203575</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49899396" visible="true" weight="0.38730997" />
+      <window_info id="Structure" order="1" sideWeight="0.501006" side_tool="true" weight="0.38791734" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4990086" weight="0.45531914" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.69361705" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.4962631" visible="true" weight="0.1929078" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49966952" weight="0.3319149" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.114893615" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5037369" side_tool="true" weight="0.32459018" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32907802" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22273628" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.45531914" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49966952" weight="0.44539008" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32907802" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32907802" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50033045" side_tool="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32907802" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Printed probabilities for each segment of larger image. Added 4.png (image of airport)" />
+    <MESSAGE value="Created basic gui class" />
+    <MESSAGE value="Basic changes to layout in attempt to divide into two frames. Added docstring comments to image_parser functions" />
+    <MESSAGE value="new images generated by new create_test_images, update of requirements.bat" />
+    <MESSAGE value="updated poster" />
+    <MESSAGE value="updated poster and abstract" />
+    <MESSAGE value="updates abstract" />
+    <MESSAGE value="added labels to x and y axis&#10;Removed call to method in HOG to remove runtime bug" />
+    <MESSAGE value="created function to create combined graph of image descriptor averages" />
+    <MESSAGE value="small updates to poster" />
+    <MESSAGE value="small updates to poster and abstract" />
+    <MESSAGE value="Updated README.md" />
+    <MESSAGE value="minor updates to poster and abstract" />
+    <MESSAGE value="Cross validation of new data set. Results stored in CVResults" />
+    <MESSAGE value="cross validation of data set. small changes to results directory" />
+    <MESSAGE value="updated final report" />
+    <MESSAGE value="added plt window to display search results" />
+    <MESSAGE value="Completed large image search section" />
+    <MESSAGE value="attempted to fix drawing bug" />
+    <MESSAGE value="update" />
+    <MESSAGE value="matplolibupload" />
+    <MESSAGE value="Added matplolib image to save section" />
+    <MESSAGE value="minor spelling and grammar corrections" />
+    <MESSAGE value="matplolibupload of stanalone classification" />
+    <MESSAGE value="finalising report" />
+    <option name="LAST_COMMIT_MESSAGE" value="finalising report" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="temp" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>temp</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Testing/test_classifier.py" />
+    <entry file="file://$PROJECT_DIR$/Testing/test.py" />
+    <entry file="file://$PROJECT_DIR$/Testing/Image_show.py" />
+    <entry file="file://$PROJECT_DIR$/Testing/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/Testing/test_set.py" />
+    <entry file="file://$PROJECT_DIR$/Version 1/customCrossValidation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" column="80" selection-start-line="15" selection-start-column="80" selection-end-line="15" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/numpy/lib/function_base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="127" selection-start-line="127" selection-end-line="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Version 1/create_test_images.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Version 1/cross_validation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Results/0.png" />
+    <entry file="file://$PROJECT_DIR$/Version 1/Testing/CVResults" />
+    <entry file="file://$PROJECT_DIR$/Version 1/classifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="45" column="38" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/35.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/38.PNG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/200.PNG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/110.PNG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/113.PNG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/115.PNG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/117.PNG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/41.PNG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/50.PNG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/49.PNG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Version 1/pdf.py" />
+    <entry file="file://$PROJECT_DIR$/Version 1/save.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Airports/12.PNG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Airports/1.PNG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Airports/10.PNG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Airports/9.PNG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Version 1/data_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="126" column="34" selection-start-line="126" selection-start-column="34" selection-end-line="126" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Results/Heatmaps/a297ce7b27084416a4aed5fdd9e0d2a2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Version 1/image_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-187">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Version 1/feature_vector_graph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="70" column="1" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Version 1/histogram_of_gradients.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Results/Heatmaps/07b93cb6076a4bb8a39c84b742c535e4.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Results/Heatmaps/31ca1867d59a40f1b0da7469af37ef4a.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Results/Heatmaps/95f54c35421b485dadc5b097d6d28f0c.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Results/Heatmaps/3223c196ea59444e8f3e060270f49028.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Results/Heatmaps/7870dd3ebce44705a3897fde6e99aef1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Results/Search/1cd096c1edad4dc8877d8508042f8467.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Results/Search/37a528f2a4ca4413b98d92133900a187.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Results/Search/5724c01bd2a6410a9dfc836bbf7f2ce9.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Results/Search/88383dfd983d4bab921f0c40efb45124.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Results/Search/a9b679ba0d3f4027b9d0e0b375aedbb0.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Results/Search/fb61b17ef518452d88d29c453fb9748c.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Results/Search/ecc4a9156e9c462ea0e905138c2be43e.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Results/Search/ea60a2763bc04e55930b0d1857c7447a.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Results/Search/f7f1af21fe9c4c93b388ae17860f1cba.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Documents/todo.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Version 1/drawing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.bat">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Version 1/Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="542">
+          <caret line="120" selection-start-line="120" selection-end-line="120" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
